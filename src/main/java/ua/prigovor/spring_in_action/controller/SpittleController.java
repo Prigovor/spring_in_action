@@ -22,7 +22,6 @@ public class SpittleController {
 
     private final SpittleRepository spittleRepository;
     private final String MAX_LONG_AS_STRING = "9223372036854775807";
-    private final String DEFAULT_COUNT = "20";
 
     @Autowired
     public SpittleController(SpittleRepository spittleRepository) {
@@ -37,12 +36,12 @@ public class SpittleController {
         return "spittles";
     }
 
-    @RequestMapping(method = GET)
+/*    @RequestMapping(method = GET)
     public List<Spittle> spittles(
             @RequestParam(value = "max",
                     defaultValue = MAX_LONG_AS_STRING) long max,
             @RequestParam(value = "count",
-                    defaultValue = DEFAULT_COUNT) int count) {
+                    defaultValue = "20") int count) {
         return spittleRepository.findSpittles(max, count);
-    }
+    }*/
 }
