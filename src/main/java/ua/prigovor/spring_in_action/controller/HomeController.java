@@ -1,8 +1,8 @@
 package ua.prigovor.spring_in_action.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -11,21 +11,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
  */
 
 @Controller
-@RequestMapping({"/", "/homepage"})
+@RequestMapping("/")
 public class HomeController {
 
     @RequestMapping(method = GET)
-    public String home() {
+    public String home(Model model) {
         return "home";
     }
 
-//    @RequestMapping(value = "/spittles")
-//    public String spittles() {
-//        return "home";
-//    }
-//
-//    @RequestMapping(value = "/spitter/register")
-//    public String register() {
-//        return "home";
-//    }
 }

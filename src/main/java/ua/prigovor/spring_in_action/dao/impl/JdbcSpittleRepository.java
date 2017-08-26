@@ -23,4 +23,9 @@ public class JdbcSpittleRepository implements SpittleRepository {
         }
         return spittles;
     }
+
+    @Override
+    public Spittle findOne(long spittleId) {
+        return null;
+    }
 }
